@@ -16,7 +16,7 @@
  * – wait for the Arduino to reply
  *   > the Arduino reads as much as you send it
  *   > after having received 512 bytes or
- *     after a break of 2 millisecs (see hostDataGap below)
+ *     after a break of few milliseconds (see hostDataGap below)
  *     the Arduino forwards the received data to the DMX bus
  * 
  * – the Arduino's response indicates the number of bytes forwarded,
@@ -27,7 +27,7 @@
  * > transmit enable: digital pin 2 (HIGH during transmit)
  *
  * Nick Schwarzenberg,
- * 09/2014, v0.1.0
+ * 09/2014, v0.1.1
  */
 
 
@@ -35,14 +35,14 @@
 #include <LeoDMX.class.h>
 
 // set version
-#define VERSION "0.1.0"
+#define VERSION "0.1.1"
 
 
 // host communication speed
 const unsigned long hostBaud = 115200;
 
 // host data timeout [ms] (gap to identify end of data block)
-const unsigned short hostDataGap = 2;
+const unsigned short hostDataGap = 3;
 
 // get DMX instance
 LeoDMX DMX;
