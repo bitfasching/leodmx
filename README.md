@@ -19,7 +19,7 @@ A software DMX-512 implementation for Arduino Leonardo & Micro:
 
 ## DMX hardware
 
-This library allows to produce a DMX-like digital signal, but it's only single-ended (alternating between your supply voltage and ground). In order to be compatible with DMX (and being able to reliably send data through a longer cable in general), you need a symmetric signal according to [RS-485](https://en.wikipedia.org/wiki/RS-485). To do so, use a RS-485 transceiver IC. Connect the data input to pin 1, and optionally the driver enable input to pin 2 for saving power when no data is sent. Using a slew-rate limited chip such as the [MAX483](https://datasheets.maximintegrated.com/en/ds/MAX1487-MAX491.pdf) makes your setup more tolerant to bad cables and minimizes the risk of interference in its surroundings.
+This library allows your Arduino to produce a DMX-like digital signal, but it's only single-ended (alternating between your supply voltage and ground). In order to be compatible with DMX (and being able to reliably send data through a longer cable in general), you need a symmetric signal according to [RS-485](https://en.wikipedia.org/wiki/RS-485). To do so, use a RS-485 transceiver IC. Connect the data input to pin 1, and optionally the driver enable input to pin 2 for saving power when no data is sent. Using a slew-rate limited chip such as the [MAX483](https://datasheets.maximintegrated.com/en/ds/MAX1487-MAX491.pdf) makes your setup more tolerant to bad cables and minimizes the risk of interference in its surroundings. If the total length of your bus exceeds a couple of meters, make sure to terminate the DMX bus with a 120 Ω resistor between the data wires.
 
 
 ## Getting started with examples
